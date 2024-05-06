@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
     res.send("Hello from Node API Server Updated")
 });
 
+app.post('/api/products', (req, res) => {
+    console.log(req.body);
+    res.send(req.body);
+});
+
 mongoose.connect("mongodb+srv://taimoortariq2015:timston5678>@backenddb.lmfkans.mongodb.net/Node-API?retryWrites=true&w=majority&appName=BackendDB")
 .then(() => {
     console.log("Connected to database");
